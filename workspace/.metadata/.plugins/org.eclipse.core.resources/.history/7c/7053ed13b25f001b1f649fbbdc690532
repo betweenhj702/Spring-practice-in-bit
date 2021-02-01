@@ -1,0 +1,23 @@
+package sdo.md.aop;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+import lombok.extern.log4j.Log4j;
+
+@Log4j
+@Aspect
+@Component
+public class SampleLogAdvice {
+	public void logBefore() {
+		
+	}
+	
+	public void logAfter() {
+		
+	}
+	
+	public void logAfterThrowing(Exception exception) {
+	
+	}
+}

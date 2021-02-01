@@ -1,0 +1,14 @@
+package sdo.md.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TxSampleServiceImpl implements TxSampleService {
+
+	@Override
+	public void addDatas(String data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

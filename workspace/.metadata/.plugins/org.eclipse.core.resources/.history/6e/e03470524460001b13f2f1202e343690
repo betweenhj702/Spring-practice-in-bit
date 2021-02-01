@@ -1,0 +1,11 @@
+package sdo.md.service;
+
+public class TxSampleServiceImpl implements TxSampleService {
+
+	@Override
+	public void addData(String data) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

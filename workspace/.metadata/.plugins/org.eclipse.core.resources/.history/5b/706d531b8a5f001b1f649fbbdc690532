@@ -1,0 +1,5 @@
+package sdo.md.domain;
+
+public class ChartDTO {
+
+}

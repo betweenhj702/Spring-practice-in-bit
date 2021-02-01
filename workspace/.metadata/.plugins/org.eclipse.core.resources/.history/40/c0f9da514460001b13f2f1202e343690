@@ -1,0 +1,5 @@
+package sdo.md.service;
+
+public interface TxSampleService {
+	public void addData(String data);
+}

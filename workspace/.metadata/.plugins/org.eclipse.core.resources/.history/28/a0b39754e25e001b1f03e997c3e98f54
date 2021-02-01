@@ -1,0 +1,51 @@
+package sdo.md.controller;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lombok.extern.log4j.Log4j;
+import sdo.md.domain.Address;
+
+@Log4j
+@RestController
+@RequestMapping("rest")
+public class RestControllerWithAddress {
+	
+	@GetMapping(value="/getText", produces = "text/plain;charset=utf-8")
+	public String getText() {
+		//return "index"; >> index.jsp 일반 컨트롤러에서, rest컨트롤러에서는?
+		return "안녕";
+	}
+	@GetMapping(value="/getAddress", 
+			produces = {MediaType.APPLICATION_JSON_UTF8_VALUE, MediaType.APPLICATION_XML_VALUE})
+    public Address getAddress() {
+    	return new Address(1, "홍길동", "서울시", new Date(2021-1900, 1-1, 25));
+    }
+	@GetMapping("getList")
+	public List<Address> getList(){
+		List<Address> list = new ArrayList<Address>();
+		Address a1 = new Address(1, "홍길동", "서울시", new Date(2021-1900, 1-1, 25));
+		Address a2 = new Address(2, "이순신", "부산시", new Date(2021-1900, 1-1, 25));
+		list.add(a1); list.add(a2);
+		
+		return list;
+	}
+	
+	@GetMapping("getMap")
+	public Map<String, Address> getMap(){
+		Map<String, Address> map = new HashMap<String, Address>();
+		Address a1 = new Address(1, "홍길동", "서울시", new Date(2021-1900, 1-1, 25));
+		Address a2 = new Address(2, "이순신", "부산시", new Date(2021-1900, 1-1, 25));
+		map.put("first", a1); map.put("second", a2);
+		
+		return map;
+	}
+}

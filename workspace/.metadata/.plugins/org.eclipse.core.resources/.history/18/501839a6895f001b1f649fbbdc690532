@@ -1,0 +1,16 @@
+package sdo.md.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("chart")
+public class ChartController {
+	
+	@RequestMapping("chart.do")
+	public String showView() {
+		return "chart/chart";
+	}
+	
+	
+}

@@ -1,0 +1,29 @@
+package sdo.bt.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("pages")
+public class PageController {
+	@RequestMapping("blank.html")
+	public String blank() {
+		return "pages/blank";
+	}
+	@RequestMapping("buttons.html")
+	public String buttons() {
+		return "pages/buttons";
+	}
+	@RequestMapping("flot.html")
+	public String flot() {
+		return "pages/flot";
+	}
+	@RequestMapping("forms.html")
+	public String forms() {
+		return "pages/forms";
+	}
+	@RequestMapping("grid.html")
+	public String grid() {
+		return "pages/grid";
+	}
+}

@@ -1,0 +1,17 @@
+package sdo.md.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("file")
+public class DargdropController {
+	
+	
+	@GetMapping("form_dd.do")
+	public String form() {
+		return "drag_drop/form";
+	}
+	
+}
